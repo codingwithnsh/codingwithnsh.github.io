@@ -1,100 +1,201 @@
-body {
+/* General styles */
+body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1c1c1c;
-    color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
-header {
+/* Navbar header */
+.nav-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background-color: #242424;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
 }
 
-header h1 {
+.nav-brand img {
+    height: 50px;
+}
+
+.fa-bars {
+    cursor: pointer;
+    color: white;
+}
+
+.header-links ul {
+    display: flex;
+    list-style: none;
     margin: 0;
-    font-size: 1.5rem;
+    padding: 0;
 }
 
-nav ul {
+.header-links ul li {
+    margin: 0 10px;
+}
+
+.header-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Sidebar slider */
+.nav-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    text-align: center;
+}
+
+.nav-links ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 10%;
-    background: linear-gradient(135deg, #2d2d2d, #1c1c1c);
-}
-
-.content {
-    max-width: 50%;
-}
-
-.content h2 {
-    font-size: 2rem;
-    color: #aaa;
-}
-
-.content h1 {
-    font-size: 3rem;
-    margin: 10px 0;
-}
-
-.content h3 {
-    font-size: 1.5rem;
-}
-
-.highlight {
-    color: #00bcd4;
-}
-
-.content p {
-    font-size: 1rem;
+.nav-links ul li {
     margin: 20px 0;
 }
 
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    margin-right: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00bcd4;
-    color: #fff;
+.nav-links ul li a {
     text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.fa-times {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.aboutme {
+    background: url('your-image-url-here.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.opaque-bg {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Skills section */
+.container-skillbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skillbar {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    position: relative;
+}
+
+.skillbar-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}
+
+.skillbar-bar {
+    height: 40px;
+    background: #333;
+    text-align: right;
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+    line-height: 40px;
+    color: white;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-top: 10px;
 }
 
-.image img {
-    border-radius: 10px;
-    width: 400px;
+.contact-form .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer .social-links span {
+    margin: 0 10px;
+}
+
+.footer .social-links a {
+    color: white;
+}
+
+.footer .social-links a:hover {
+    color: #ddd;
 }
