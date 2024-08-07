@@ -1,10 +1,11 @@
-$(document).ready(function() {
-    $('.fa-bars').click(function() {
-        $('.nav-screen').fadeIn();
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('nav a');
 
-    $('.fa-times').click(function() {
-        $('.nav-screen').fadeOut();
-    });
-});
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
 
+            window.scrollTo({
+                top: targetSection.offsetTop
