@@ -1,70 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #242424;
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.5rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
 }
 
-section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #2d2d2d, #1c1c1c);
 }
 
-section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 0.5rem;
+.content {
+    max-width: 50%;
 }
 
-.project {
-    margin: 1rem 0;
+.content h2 {
+    font-size: 2rem;
+    color: #aaa;
 }
 
-.project h3 {
-    margin: 0;
+.content h1 {
+    font-size: 3rem;
+    margin: 10px 0;
 }
 
-.project a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
+.content h3 {
+    font-size: 1.5rem;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
+.highlight {
+    color: #00bcd4;
+}
+
+.content p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00bcd4;
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.image img {
+    border-radius: 10px;
+    width: 400px;
 }
